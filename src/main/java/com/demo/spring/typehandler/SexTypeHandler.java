@@ -5,18 +5,18 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.demo.spring.enumeration.SexEnum;
 import org.apache.ibatis.type.BaseTypeHandler;
 import org.apache.ibatis.type.JdbcType;
 import org.apache.ibatis.type.MappedJdbcTypes;
 import org.apache.ibatis.type.MappedTypes;
 
-import com.springboot.chapter5.enumeration.SexEnum;
 
 /**** imports ****/
 // 声明JdbcType为整形
 @MappedJdbcTypes(JdbcType.INTEGER)
 // 声明JavaType为SexEnum
-@MappedTypes(value=SexEnum.class)
+@MappedTypes(value= SexEnum.class)
 public class SexTypeHandler extends BaseTypeHandler<SexEnum> {
  
     // 通过列名读取性别

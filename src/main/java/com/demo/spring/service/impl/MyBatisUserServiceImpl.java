@@ -1,11 +1,10 @@
 package com.demo.spring.service.impl;
 
+import com.demo.spring.dao.MyBatisUserDao;
+import com.demo.spring.pojo.User;
+import com.demo.spring.service.MyBatisUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.springboot.chapter5.dao.MyBatisUserDao;
-import com.springboot.chapter5.pojo.User;
-import com.springboot.chapter5.service.MyBatisUserService;
 
 /**** imports ****/
 @Service

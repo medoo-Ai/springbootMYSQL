@@ -2,7 +2,7 @@ package com.demo.spring.service;
 
 import java.util.List;
 
-import com.springboot.chapter5.pojo.User;
+import com.demo.spring.pojo.User;
 
 public interface JdbcTmplUserService {
 	

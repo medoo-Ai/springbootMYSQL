@@ -2,13 +2,12 @@ package com.demo.spring.controller;
 
 import java.util.List;
 
+import com.demo.spring.dao.JpaUserRepository;
+import com.demo.spring.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.springboot.chapter5.dao.JpaUserRepository;
-import com.springboot.chapter5.pojo.User;
 
 /**** imports ****/
 @Controller

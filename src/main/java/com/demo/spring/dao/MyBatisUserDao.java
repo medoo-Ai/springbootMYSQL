@@ -1,8 +1,8 @@
 package com.demo.spring.dao;
 
+import com.demo.spring.pojo.User;
 import org.springframework.stereotype.Repository;
 
-import com.springboot.chapter5.pojo.User;
 
 /**** imports ****/
 @Repository

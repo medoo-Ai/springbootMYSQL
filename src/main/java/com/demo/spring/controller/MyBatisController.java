@@ -1,12 +1,11 @@
 package com.demo.spring.controller;
 
+import com.demo.spring.pojo.User;
+import com.demo.spring.service.MyBatisUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.springboot.chapter5.pojo.User;
-import com.springboot.chapter5.service.MyBatisUserService;
 
 /**** imports ****/
 @Controller

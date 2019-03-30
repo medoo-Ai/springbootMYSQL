@@ -8,10 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.demo.spring.converter.SexConverter;
+import com.demo.spring.enumeration.SexEnum;
 import org.apache.ibatis.type.Alias;
-
-import com.springboot.chapter5.converter.SexConverter;
-import com.springboot.chapter5.enumeration.SexEnum;
 
 /**** imports ****/
 // 标明是一个实体类

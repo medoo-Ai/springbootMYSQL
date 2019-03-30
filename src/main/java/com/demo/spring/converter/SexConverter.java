@@ -2,7 +2,7 @@ package com.demo.spring.converter;
 
 import javax.persistence.AttributeConverter;
 
-import com.springboot.chapter5.enumeration.SexEnum;
+import com.demo.spring.enumeration.SexEnum;
 
 /**** imports ****/
 public class SexConverter 

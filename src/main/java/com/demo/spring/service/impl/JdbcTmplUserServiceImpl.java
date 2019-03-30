@@ -6,14 +6,14 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.List;
 
+import com.demo.spring.enumeration.SexEnum;
+import com.demo.spring.pojo.User;
+import com.demo.spring.service.JdbcTmplUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
-import com.springboot.chapter5.enumeration.SexEnum;
-import com.springboot.chapter5.pojo.User;
-import com.springboot.chapter5.service.JdbcTmplUserService;
 
 /**** imports ****/
 @Service

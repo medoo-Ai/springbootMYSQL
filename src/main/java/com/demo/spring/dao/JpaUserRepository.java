@@ -2,10 +2,9 @@ package com.demo.spring.dao;
 
 import java.util.List;
 
+import com.demo.spring.pojo.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-
-import com.springboot.chapter5.pojo.User;
 
 public interface JpaUserRepository extends JpaRepository<User, Long> {
 	@Query("from user where user_name like concat('%', ?1, '%') " 
