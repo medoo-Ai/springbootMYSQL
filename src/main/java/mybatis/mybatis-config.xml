@@ -3,7 +3,14 @@
   PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-    <mappers>
+   <!-- <mappers>
         <mapper resource="com/springboot/chapter5/mapper/User_Mapper.xml"/>
-    </mappers>
+    </mappers>-->
+    <plugins>
+        <plugin interceptor="com.demo.spring.plugin.MyPlugin">
+            <property name="key1" value="value1"/>
+            <property name="key2" value="value2"/>
+            <property name="key2" value="value2"/>
+        </plugin>
+    </plugins>
 </configuration>
