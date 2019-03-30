@@ -9,16 +9,17 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
 
-@SpringBootApplication(scanBasePackages = "com.springboot.chapter5")
+@SpringBootApplication(scanBasePackages = "com.demo.spring")
 //定义JPA接口扫描包路径
-@EnableJpaRepositories(basePackages = "com.springboot.chapter5.dao")
+@EnableJpaRepositories(basePackages = "com.demo.spring.dao")
 //定义实体Bean扫描包路径
-@EntityScan(basePackages = "com.springboot.chapter5.pojo")
-@MapperScan(basePackages="com.springboot.chapter5", annotationClass = Repository.class)
+@EntityScan(basePackages = "com.demo.spring.pojo")
+@MapperScan(basePackages="com.demo.spring", annotationClass = Repository.class)
 public class Chapter5Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Chapter5Application.class, args);
+		System.out.println("服务已经启动");
 	}
 	
 	@Autowired
