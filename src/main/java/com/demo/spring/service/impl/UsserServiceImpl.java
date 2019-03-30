@@ -21,7 +21,7 @@ public class UsserServiceImpl implements UserService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    // 集jpa
+    // 集
     private RowMapper<User> getRowMapper(){
         RowMapper<User> userRowMapper=(ResultSet rs,int row)->{
             User user = new User();
@@ -36,26 +36,34 @@ public class UsserServiceImpl implements UserService {
 
     @Override
     public int insert(User user) {
-        return 0;
+        String sql="insert into t_user values(null, ? , ?, ?)";
+        return this.jdbcTemplate.update(sql, user.getId(),user.getName(),user.getAge(),user.getSexEnum().getId());
     }
 
     @Override
     public int update(User user) {
-        return 0;
+        String sql="update t_user set name=? , age=?, sex=?"+"where id=?";
+        return this.jdbcTemplate.update(sql, user.getName(),user.getAge(),user.getSexEnum().getId(),user.getId());
     }
 
     @Override
     public User selectUserById(Long uid) {
-        return null;
+        Object params=new Object[]{uid};
+        String sql="select * from  t_user where id=?";
+        return this.jdbcTemplate.queryForObject(sql, (Object[]) params,getRowMapper());
     }
 
     @Override
     public List<User> selectUserListByAgeOrName(User user) {
-        return null;
+        Object params=new Object[]{user.getName(),user.getAge()};
+        String sql="select * from  t_user"+"where name like concat ('%',?,'%')"+"and age like concat('%',?,'%')";
+        return jdbcTemplate.query(sql, (Object[]) params,getRowMapper());
     }
 
     @Override
     public int deleteById(Long uid) {
-        return 0;
+        Object params=new Object[]{uid};
+        String sql="select * from  t_user where id=?";
+        return jdbcTemplate.update(sql, params);
     }
 }
